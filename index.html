@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EMDR App</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./lib/node_modules/materialize-css/dist/css/materialize.min.css">
+	<!-- <link rel="stylesheet" href="./lib/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+</head>
+<body ng-app="EMDR">
+
+	<header>
+		<div ng-include="'partials/navbar.html'"></div>
+	</header>
+	<main>
+
+	<div ng-view></div>
+
+	</main>
+
+	<footer>
+	Copyright 2017 | Kathy Weisensel
+	</footer>
+
+	<script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="./lib/node_modules/materialize-css/dist/js/materialize.min.js"></script>
+	<!-- <script type="text/javascript" src="./lib/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+	<script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
+
+	<script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
+
+	<script type="text/javascript" src="./app/app.js"></script>
+	<script type="text/javascript" src="./app/values/FBCreds.js"></script>
+
+	<script type="text/javascript" src="./app/factories/DataFactory.js"></script>
+	<script type="text/javascript" src="./app/factories/AuthFactory.js"></script>
+
+	<!--Controller links here-->
+	<script type="text/javascript" src="./app/controllers/NavCtrl.js"></script>
+	<script type="text/javascript" src="./app/controllers/HomeCtrl.js"></script>
+	<script type="text/javascript" src="./app/controllers/AuthCtrl.js"></script>
+
+</body>
+</html>
