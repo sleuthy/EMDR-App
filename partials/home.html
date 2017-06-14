@@ -1,5 +1,7 @@
-<div>
+<div ng-controller="HomeCtrl">
 	<h1>My Patients</h1>
-	<p>List Patient data as table here</p>
+	<div ng-repeat="item in patientList">
+		<p>{{item}}</p>
+	</div>
 	<button><a ng-href="#!/addpatient">New Patient</a></button>
 </div>

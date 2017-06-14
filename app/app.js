@@ -19,19 +19,19 @@ app.config( ($routeProvider) => {
 	$routeProvider
 	.when('/', {
     	templateUrl: 'partials/auth.html',
-		controller: 'AuthCtrl'
+		controller: 'NavCtrl'
 	})
 	.when('/login', {
 		templateUrl: 'partials/auth.html',
-		controller: 'AuthCtrl'
+		controller: 'NavCtrl'
 	})
 	.when('/logout', {
 		templateUrl: 'partials/auth.html',
-		controller: 'AuthCtrl'
+		controller: 'NavCtrl'
 	})
 	.when('/home', {
 		templateUrl: 'partials/home.html',
-		controller: 'HomeCtrl',
+		controller: 'NavCtrl',
 		resolve: {isAuth}
 	})
 	.when('/addpatient', {

@@ -17,7 +17,21 @@ app.factory("DataFactory", ($q, $http, FBCreds, AuthFactory) => {
 		});
 	};
 
+	const addPatient = (newObj) => {
+		return $q( (resolve, reject) => {
+			let object = JSON.stringify(newObj);
+			$http.post(`${FBCreds.databaseURL}/patients.json`, object)
+			.then ( (patientID) => {
+				resolve(patientID);
+			})
+			.catch ( (error) => {
+				reject(error);
+			});
+		});
+	};
+
 	return {
-		getPatientList
+		getPatientList,
+		addPatient
 	};
 });
