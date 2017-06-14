@@ -1,6 +1,6 @@
 "use strict";
 
-const app = angular.module('EMDR' ,["ngRoute"]);
+const app = angular.module("EMDR" ,["ngRoute"]);
 
 let isAuth = (AuthFactory) => new Promise ( (resolve, reject) => {
 	AuthFactory.isAuthenticated()
@@ -32,6 +32,26 @@ app.config( ($routeProvider) => {
 	.when('/home', {
 		templateUrl: 'partials/home.html',
 		controller: 'HomeCtrl',
+		resolve: {isAuth}
+	})
+	.when('/addpatient', {
+		templateUrl: 'partials/addpatient.html',
+		controller: 'AddPatientCtrl',
+		resolve: {isAuth}
+	})
+	.when('/patientdata', {
+		templateUrl: 'partials/patientdata.html',
+		controller: 'PatientDataCtrl',
+		resolve: {isAuth}
+	})
+	.when('/presession', {
+		templateUrl: 'partials/presession.html',
+		controller: 'PreSessionCtrl',
+		resolve: {isAuth}
+	})
+	.when('/session', {
+		templateUrl: 'partials/session.html',
+		controller: 'SessionCtrl',
 		resolve: {isAuth}
 	})
 	.otherwise('/');
