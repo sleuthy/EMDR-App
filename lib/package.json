@@ -1,5 +1,5 @@
 {
-  "name": "EMDR App",
+  "name": "EMDRApp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +8,7 @@
   "dependencies": {
     "angular": "^1.6.4",
     "angular-materialize": "^0.2.2",
+    "angular-module-animate": "^1.2.19",
     "angular-route": "^1.6.4",
     "firebase": "^4.1.1",
     "jquery": "^3.2.1",
