@@ -5,6 +5,7 @@ console.log("NavCtrl loaded.");
 app.controller('NavCtrl', function ($scope, AuthFactory, $window, $location) {
 
   $scope.isLoggedIn = false;
+  $scope.navbar = true;
 
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {

@@ -2,3 +2,6 @@
 
 console.log("Session Ctrl loaded.");
 
+$scope.hideNav = true;
+
+

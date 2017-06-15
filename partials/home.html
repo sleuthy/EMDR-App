@@ -1,7 +1,7 @@
-<div ng-controller="HomeCtrl">
+<div ng-controller="HomeCtrl" ng-show="navbar">
 	<h1>My Patients</h1>
-	<div ng-repeat="item in patientList">
-		<p>{{item}}</p>
+	<div ng-repeat="item in patients">
+		<p><a ng-href="#!/patientdata/{{item.ID}}">{{item.ID}}</a></p>
 	</div>
 	<button><a ng-href="#!/addpatient">New Patient</a></button>
 </div>

@@ -2,20 +2,28 @@
 
 console.log("DataFactory loaded.");
 
-app.factory("DataFactory", ($q, $http, FBCreds, AuthFactory) => {
+app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
+
+	let user = AuthFactory.getUser();
 
 	const getPatientList = () => {
 		let patients = [];
 		return $q( (resolve, reject) => {
-			$http.get(`${FBCreds.databaseURL}/patients.json`)
-			.then(function(patients){
-			resolve(patients.data);
-			})
-			.catch( (error) => {
-				reject(error);
-			});
-		});
-	};
+			$http.get(`${FBCreds.databaseURL}/patients.json?orderBy="uid"&equalTo="${user}"`)
+			.then( (itemObj) => {
+        let patientCollection = itemObj.data;
+        console.log("patientCollection", patientCollection);
+        Object.keys(patientCollection).forEach( (key) => {
+          patientCollection[key].id = key;
+          patients.push(patientCollection[key]);
+        });
+        resolve(patients);
+        })
+      	.catch( (error) => {
+        reject(error);
+      });
+    });
+  };
 
 	const addPatient = (newObj) => {
 		return $q( (resolve, reject) => {
