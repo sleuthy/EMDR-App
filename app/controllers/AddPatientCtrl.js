@@ -6,6 +6,7 @@ app.controller("AddPatientCtrl", function($scope, DataFactory, AuthFactory, $loc
 
 	let user = AuthFactory.getUser();
 
+	$scope.hideNav = false;
 	$scope.newPatient = {
 		ID: "",
 		uid: user

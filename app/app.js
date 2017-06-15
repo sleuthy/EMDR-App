@@ -1,6 +1,6 @@
 "use strict";
 
-const app = angular.module("EMDR" ,["ngRoute"]);
+const app = angular.module("EMDR" ,["ngRoute", "ngAnimate"]);
 
 let isAuth = (AuthFactory) => new Promise ( (resolve, reject) => {
 	AuthFactory.isAuthenticated()
@@ -51,7 +51,7 @@ app.config( ($routeProvider) => {
 	})
 	.when('/session', {
 		templateUrl: 'partials/session.html',
-		controller: 'SessionCtrl',
+		// controller: 'SessionCtrl',
 		resolve: {isAuth}
 	})
 	.otherwise('/');

@@ -7,6 +7,7 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
     "angular-materialize": "^0.2.2",
     "angular-module-animate": "^1.2.19",
     "angular-route": "^1.6.4",
