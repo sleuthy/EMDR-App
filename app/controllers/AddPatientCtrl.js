@@ -9,7 +9,9 @@ app.controller("AddPatientCtrl", function($scope, DataFactory, AuthFactory, $loc
 	$scope.hideNav = false;
 	$scope.newPatient = {
 		ID: "",
-		uid: user
+		uid: user,
+		speed: "",
+		movements: ""
 	};
 
 	$scope.addPatient = function(){

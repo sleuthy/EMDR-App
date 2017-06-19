@@ -1,0 +1,27 @@
+<div ng-include="'partials/navbar.html'"></div>
+<div ng-controller="HomeCtrl">
+		<h1 class="center">My Patients</h1>
+	<div class="row">
+		<div class="col s4 m6">
+		<table class="responsive-table">
+		<thead>
+			<tr>
+				<th>Patient</th>
+				<th>Start Session</th>
+			</tr>
+		</thead>
+
+		<tbody ng-repeat="item in patients">
+			<tr>
+				<td><a ng-href="#!/patientdata/{{item.ID}}">{{item.ID}}</a></td>
+				<td><button><a ng-href="#!/presession">New Session</a></button></td>
+			</tr>
+			</tbody>
+			</table>
+			</div>
+	</div>
+	<button class="waves-effect btn center"><a ng-href="#!/addpatient">New Patient</a></button>
+</div>
+
+<!-- add styling to include table inside container / box / responsive sizing
+ -->

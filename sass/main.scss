@@ -1,8 +1,18 @@
+$primary-color-dark:   #00796B;
+$primary-color:        #009688;
+$primary-color-light:  #B2DFDB;
+$primary-color-text:   #FFFFFF;
+$accent-color:         #607D8B;
+$primary-text-color:   #212121;
+$secondary-text-color: #757575;
+$divider-color:        #BDBDBD;
+
+
 @-webkit-keyframes movingcircle {
-	0%{left:50%;}
-	25%{left:90%}
-	75%{left:10%;}
-	100%{left:50%;}
+  0%{left:50%;}
+  25%{left:90%}
+  75%{left:10%;}
+  100%{left:50%;}
 }
 
 .circle {
@@ -18,9 +28,24 @@
   bottom: 50%;
   left: 50%;
   margin-left: -100px;
-  -webkit-animation:movingcircle 4s infinite;
+  -webkit-animation:movingcircle 3s 25;
 }
 
 .sessionpage {
-	background-color: black;
+  background-color: black;
+  height: 100vh;
 }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+// .patienttable {
+//     color: $primary-color-dark;
+// }
+
+main {
+    flex: 1 0 auto;
+  }

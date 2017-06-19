@@ -39,7 +39,7 @@ app.config( ($routeProvider) => {
 		controller: 'AddPatientCtrl',
 		resolve: {isAuth}
 	})
-	.when('/patientdata', {
+	.when('/patientdata/:patientID', {
 		templateUrl: 'partials/patientdata.html',
 		controller: 'PatientDataCtrl',
 		resolve: {isAuth}
@@ -53,8 +53,8 @@ app.config( ($routeProvider) => {
 		templateUrl: 'partials/session.html',
 		// controller: 'SessionCtrl',
 		resolve: {isAuth}
-	})
-	.otherwise('/');
+	});
+	// .otherwise('/');
 });
 
 app.run(($location, FBCreds) => {
