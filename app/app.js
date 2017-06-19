@@ -46,13 +46,13 @@ app.config( ($routeProvider) => {
 	})
 	.when('/presession', {
 		templateUrl: 'partials/presession.html',
-		// controller: 'PreSessionCtrl',
-		// resolve: {isAuth}
+		controller: 'PreSessionCtrl',
+		resolve: {isAuth}
 	})
 	.when('/session', {
 		templateUrl: 'partials/session.html',
 		// controller: 'SessionCtrl',
-		// resolve: {isAuth}
+		resolve: {isAuth}
 	})
 	.otherwise('/');
 });

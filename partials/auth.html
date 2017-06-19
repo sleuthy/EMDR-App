@@ -1,5 +1,8 @@
-<div ng-controller="NavCtrl" ng-hide="navbar" class="container">
-	<p class="flow-text">Please <a ng-click="googleLogIn()">Login</a></p>
+<div class="container container--auth">
+	<div class="col-xs-6">
+		<h4>Please login.</h4>
+		<button class="waves-effect waves-light btn" ng-click="googleLogIn()">Sign In</button>
+	</div>
 </div>
 
 <!-- may need to alter ng hide / controller to show login without navbar -->

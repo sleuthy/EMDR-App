@@ -18,7 +18,7 @@ app.controller("PatientDataCtrl", function($scope, DataFactory, AuthFactory, $lo
 	DataFactory.getPatient($routeParams.patientID)
 	.then( (stuff) => {
 		$scope.patient = stuff;
-		$scope.patient.ID = $routeParams.patientID;
+		$scope.patientID = $routeParams.patientID;
 	});
 
 	$scope.submitPatient = function(){
