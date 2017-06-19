@@ -1,6 +1,24 @@
-<div ng-show="navbar">
-<h2>Patient Data</h2>
-<table>
-<p>Patient ID:{{patientID}}</p>
-</table>
+<div ng-controller="PatientDataCtrl" ng-show="navbar">
+	<h1 class="center">Patient Data</h1>
+	<div class="row">
+	<div class="col s2 m6">
+	<table>
+		<thead>
+			<th>Patient ID:</th>
+			<th>Preferred Speed:</th>
+			<th>Preferred Number of Movements:</th>
+<!-- 			add save column?
+			add delete column? -->
+		</thead>
+
+		<tbody ng-repeat="item in patients">
+			<tr>
+				<td>{{item.ID}}</td>
+				<td>speed here</td>
+				<td>movements here</td>
+				<td><button><a ng-click="updatePatient()">Save</a></button></td>
+				<td><button class="danger btn"><a ng-click="deletePatient()">Delete</a></button></td>
+			</tr>
+		</tbody>
+	</table>
 </div>

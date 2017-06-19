@@ -38,8 +38,41 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
 		});
 	};
 
+	const updatePatient = ( patientID, editedObj ) => {
+		return $q( (resolve, reject) => {
+			let newObj = JSON.stringify(editedObj);
+			$http.patch(`${FBCreds.databaseURL}/patients/${patientID}.json`, newObj)
+			.then( (itemObj) => {
+				resolve(itemObj);
+			})
+			.catch( (error) => {
+				reject(error);
+			});
+		});
+	};
+
+	const getPatient = ( patientID ) => {
+		return $q( (resolve, reject) => {
+			$http.get(`${FBCreds.databaseURL}/patients/${patientID}.json`)
+      .then( (itemObj) => {
+        resolve(itemObj.data);
+      })
+      .catch( (error) => {
+        reject(error);
+      });
+    });
+  };
+
 	return {
 		getPatientList,
-		addPatient
+		addPatient,
+		updatePatient,
+		getPatient
 	};
 });
+
+
+
+
+
+
