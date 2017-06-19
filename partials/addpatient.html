@@ -1,7 +1,24 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div ng-controller="AddPatientCtrl">
 	<h2>Add New Patient</h2>
-	<p>Patient ID</p>
-	<input type="text" name="" ng-model="newPatient.ID">
-	<button ng-click="addPatient()">Add Patient</button>
+	<div class="row">
+		<form class="col s8">
+			<div class="input-field col s8">
+			<input id="patient_id" type="text" ng-model="newPatient.ID">
+			<label for="patient_id">Patient ID</label>
+			</div>
+			<div class="input-field col s8">
+			<input id="movements" type="number" ng-model="newPatient.movements">
+			<label for="movements">Number of Movements</label>
+			</div>
+			<div class="input-field col s8">
+			<input id="speed" type="number" ng-model="newPatient.speed">
+			<label for="speed">Speed</label>
+			</div>
+			<div class="col s8">
+			<button type="submit" ng-click="addPatient()">Add Patient</button>
+			</div>
+			</div>
+		</form>
+</div>
 </div>

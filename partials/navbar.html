@@ -1,8 +1,9 @@
 <nav ng-controller="NavCtrl" class="nav-wrapper teal" ng-show="navbar">
-  <a class="brand-logo" href="#!/home">Home</a>
+  <a class="brand-logo" href="#!/home">EMDR Assistant</a>
   	<!-- <img scr="images/logo.jpg"> -->
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a ng-click="googleLogIn()" ng-show="!isLoggedIn">Login</a></li>
-      <li><a ng-click="logout()" ng-show="isLoggedIn">Logout</a></li>
+      <ul class="right" id="nav-mobile">
+    	<li><a ng-href="#!/addpatient"><button class="waves-effect btn center grey">New Patient</button></a>
+     	<li><a ng-click="googleLogIn()" ng-show="!isLoggedIn">Login</a></li>
+     	<li><a ng-click="logout()" ng-show="isLoggedIn">Logout</a></li>
     </ul>
 </nav>

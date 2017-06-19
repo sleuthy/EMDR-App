@@ -14,7 +14,7 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
         let patientCollection = itemObj.data;
         console.log("patientCollection", patientCollection);
         Object.keys(patientCollection).forEach( (key) => {
-          patientCollection[key].id = key;
+          patientCollection[key].fbID = key;
           patients.push(patientCollection[key]);
         });
         resolve(patients);
@@ -52,10 +52,11 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
 	};
 
 	const getPatient = ( patientID ) => {
+		console.log("patientID", patientID);
 		return $q( (resolve, reject) => {
 			$http.get(`${FBCreds.databaseURL}/patients/${patientID}.json`)
       .then( (itemObj) => {
-        resolve(itemObj.data);
+        resolve(itemObj);
       })
       .catch( (error) => {
         reject(error);
@@ -63,11 +64,19 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
     });
   };
 
+  	// const deletePatient = ( patientID ) => {
+  	// 	return $q( (resolve, reject) => {
+  	// 		$http.get(`)
+  	// 	})
+
+  	// }
+
 	return {
 		getPatientList,
 		addPatient,
 		updatePatient,
 		getPatient
+		// deletePatient
 	};
 });
 

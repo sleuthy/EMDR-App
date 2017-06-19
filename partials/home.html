@@ -1,9 +1,9 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div class="container" ng-controller="HomeCtrl">
 	<div class="row">
-		<h1>My Patients</h1>
-		<div class="col s4 m6">
-		<table class="responsive-table">
+		<h1 class="left-align">My Patients</h1>
+		<div class="col s4 m6 center">
+		<table class="responsive-table highlight center">
 		<thead>
 			<tr>
 				<th>Patient</th>
@@ -13,15 +13,11 @@
 
 		<tbody ng-repeat="item in patients">
 			<tr>
-				<td><a ng-href="#!/patientdata/{{item.ID}}">{{item.ID}}</a></td>
-				<td><button><a ng-href="#!/presession">New Session</a></button></td>
+				<td><a ng-href="#!/patientdata/{{item.fbID}}">{{ item.ID }}</a></td>
+				<td><a ng-href="#!/presession/{{}}"><button class="btn grey" type="submit">New Session</button></a></td>
 			</tr>
 			</tbody>
 			</table>
 			</div>
 	</div>
-	<button class="waves-effect btn center"><a ng-href="#!/addpatient">New Patient</a></button>
 </div>
-
-<!-- add styling to include table inside container / box / responsive sizing
- -->
