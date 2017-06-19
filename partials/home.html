@@ -1,23 +1,25 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div class="container" ng-controller="HomeCtrl">
-	<div class="row">
-		<h1 class="left-align">My Patients</h1>
-		<div class="col s4 m6 center">
+	<div class="row card">
+		<div class="col s12">
+		<h1>My Patients</h1>
+		</div>
+		<div class="col s6">
 		<table class="responsive-table highlight center">
 		<thead>
 			<tr>
 				<th>Patient</th>
-				<th>Start Session</th>
+				<th>Begin Session</th>
 			</tr>
 		</thead>
 
 		<tbody ng-repeat="item in patients">
 			<tr>
 				<td><a ng-href="#!/patientdata/{{item.fbID}}">{{ item.ID }}</a></td>
-				<td><a ng-href="#!/presession/{{}}"><button class="btn grey" type="submit">New Session</button></a></td>
+				<td><a ng-href="#!/presession/{{item.fbID}}"><button class="btn grey" type="submit">New Session</button></a></td>
 			</tr>
-			</tbody>
-			</table>
-			</div>
+		</tbody>
+		</table>
+		</div>
 	</div>
 </div>

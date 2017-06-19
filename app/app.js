@@ -44,9 +44,9 @@ app.config( ($routeProvider) => {
 		controller: 'PatientDataCtrl',
 		resolve: {isAuth}
 	})
-	.when('/presession', {
+	.when('/presession/:patientID', {
 		templateUrl: 'partials/presession.html',
-		controller: 'PreSessionCtrl',
+		controller: 'PatientDataCtrl',
 		resolve: {isAuth}
 	})
 	.when('/session', {

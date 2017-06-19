@@ -1,6 +1,26 @@
 <div ng-include="'partials/navbar.html'"></div>
-<div>
-	<table><thead>Patient Info</thead>
-	<button type="submit"><a ng-href="#!/session">Begin Session</a></button>
-	</table>
+<div ng-controller="PatientDataCtrl">
+	<div class="container">
+		<div class="row">
+			<div class="col s5 m5">
+				<div class="card">
+					<table>
+					<thead>
+						<th>Patient ID:</th>
+						<th>Speed:</th>
+						<th>Movements:</th>
+					</thead>
+					<tbody>
+					<tr ng-repeat="item in patient">
+						<td>{{ item.ID }}</td>
+						<td>{{ item.speed }}</td>
+						<td>{{ item.movements }}</td>
+					</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+				<a ng-href="#!/session"><button type="submit" class="btn grey">Begin Session</button></a>
+			</div>
+			</div>
 </div>
