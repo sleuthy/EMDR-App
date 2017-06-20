@@ -28,7 +28,7 @@ $divider-color:        #BDBDBD;
   bottom: 50%;
   left: 50%;
   margin-left: -100px;
-  -webkit-animation:movingcircle 3s 25;
+  -webkit-animation: movingcircle 1.75s 25;
 }
 
 .sessionpage {
@@ -42,10 +42,19 @@ body {
     flex-direction: column;
 }
 
-// .patienttable {
-//     color: $primary-color-dark;
-// }
-
 main {
     flex: 1 0 auto;
   }
+
+// .container  {
+//   display: flex;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+// }
+
+// .container .row {
+//   margin: 0 auto;
+// }

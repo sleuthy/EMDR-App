@@ -1,3 +1,3 @@
-"use strict";
+// "use strict";
 
-console.log("PreSessionCtrl loaded.");
+// console.log("PreSessionCtrl loaded.");

@@ -64,19 +64,24 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
     });
   };
 
-  	// const deletePatient = ( patientID ) => {
-  	// 	return $q( (resolve, reject) => {
-  	// 		$http.get(`)
-  	// 	})
-
-  	// }
+  	const deletePatient = ( patientID ) => {
+  		return $q( (resolve, reject) => {
+  			$http.delete(`${FBCreds.databaseURL}/patients/${patientID}.json`)
+  			.then( (response) => {
+  				resolve(response);
+  			})
+  			.catch( (error) => {
+  				reject(error);
+  			});
+  		});
+  	};
 
 	return {
 		getPatientList,
 		addPatient,
 		updatePatient,
-		getPatient
-		// deletePatient
+		getPatient,
+		deletePatient
 	};
 });
 
