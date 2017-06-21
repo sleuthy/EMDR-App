@@ -35,14 +35,14 @@ app.controller("PatientDataCtrl", function($scope, DataFactory, AuthFactory, $lo
 	$scope.updatePatient = function(){
 		DataFactory.updatePatient($routeParams.patientID, $scope.patients)
 		.then( (response) => {
-			$location.path("#!/home");
+			$location.path("/home");
 		});
 	};
 
 	$scope.deletePatient = function(){
 		DataFactory.deletePatient($routeParams.patientID, $scope.patients)
 		.then( (response) => {
-			$location.path("#!/home");
+			$location.path("/home");
 		});
 	};
 
