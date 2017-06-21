@@ -21,12 +21,14 @@ app.controller("SessionCtrl", function($scope, DataFactory, AuthFactory, $locati
 	console.log("scope.patient", $scope.patient);
 
 	$scope.circleAttributes = function(){
-		return {"animation-iteration-count": $scope.movementCount};
-
-		//speedcount divided by 10 etc.
-				// "animation-duration": $scope.speedCount
-			// "animation-iteration-count": sessionPatient.movements
-			// "animation-iteration-count": numMovements
+		return {"animation-iteration-count": $scope.movementCount,
+				"animation-duration": "1.5s"};
 	};
+
+	$scope.resourceSession = function(){
+		return {"animation-iteration-count": $scope.movementCount,
+				"animation-duration": "3s"};
+	};
+
 	$scope.getSessionPatient();
 });

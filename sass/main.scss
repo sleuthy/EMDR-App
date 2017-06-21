@@ -19,8 +19,8 @@
   display: block;
   background: black;
   border-radius: 100%;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   margin: 0;
   background: radial-gradient(circle at 100px 100px, #5cabff, #000);
   position: absolute;
@@ -29,9 +29,8 @@
   left: 50%;
   margin-left: -100px;
   -webkit-animation: movingcircle;
-  animation-duration: 1.1s;
   animation-timing-function: linear;
-  animation-delay: 3s;
+  animation-delay: 2.5s;
   animation-play-state: running;
 }
 
@@ -49,16 +48,3 @@ body {
 main {
     flex: 1 0 auto;
   }
-
-// .container  {
-//   display: flex;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-// }
-
-// .container .row {
-//   margin: 0 auto;
-// }

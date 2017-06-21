@@ -53,6 +53,11 @@ app.config( ($routeProvider) => {
 		templateUrl: 'partials/session.html',
 		controller: 'SessionCtrl',
 		resolve: {isAuth}
+	})
+	.when('/resourcing/:patientID', {
+		templateUrl: 'partials/resourcing.html',
+		controller: 'SessionCtrl',
+		resolve: {isAuth}
 	});
 	// .otherwise('/');
 });
