@@ -49,7 +49,7 @@ app.config( ($routeProvider) => {
 		controller: 'PatientDataCtrl',
 		resolve: {isAuth}
 	})
-	.when('/session', {
+	.when('/session/:patientID', {
 		templateUrl: 'partials/session.html',
 		controller: 'SessionCtrl',
 		resolve: {isAuth}

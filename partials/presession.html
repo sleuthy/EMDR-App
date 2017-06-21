@@ -11,18 +11,18 @@
 						<th>Movements:</th>
 					</thead>
 					<tbody>
-					<tr ng-repeat="item in patient">
-						<td>{{ item.ID }}</td>
-						<td>{{ item.speed }}</td>
-						<td>{{ item.movements }}</td>
+					<tr>
+						<td>{{ patient.ID }}</td>
+						<td>{{ patient.speed }}</td>
+						<td>{{ patient.movements }}</td>
 					</tr>
 					</tbody>
 					</table>
 				</div>
 			</div>
 			<div>
-				<a ng-href="#!/session/{{item.fbID}}""><button type="submit" class="btn grey">Begin Session</button></a>
+				<a ng-href="#!/session/{{patient.fbID}}"><button type="submit" class="btn grey">Begin Session</button></a>
 			</div>
-			</div>
-			</div>
+		</div>
+	</div>
 </div>
