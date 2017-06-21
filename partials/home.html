@@ -1,23 +1,26 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div class="container" ng-controller="HomeCtrl">
-	<h3 class="center">Welcome to EMDR Assistant</h3>
+	<!-- <h4 class="center">Choose a Patient Below</h4> -->
 	<div class="row center">
-		<div class="col s5"></div>
-		<div class="col s2 card z-depth-3 center">
+		<div class="col s3"></div>
+		<div class="col s6 card z-depth-3 center">
 		<table class="responsive-table highlight center">
 		<thead>
 			<tr>
-				<th>My Patients</th>
+				<th><h5>Patients</h5></th>
+				<th><h5>Last Session</h5></th>
 			</tr>
 		</thead>
 
 		<tbody ng-repeat="item in patients">
 			<tr>
 				<td><a ng-href="#!/presession/{{item.fbID}}"><button class="btn teal" type="submit">{{ item.ID }}</button></a></td>
+				<td></td>
+		<!-- 		<td>{{ item.sessionscompleted }}</td> -->
 			</tr>
 		</tbody>
 		</table>
 		</div>
-		<div class="col s5"></div>
+		<div class="col s3"></div>
 	</div>
 </div>

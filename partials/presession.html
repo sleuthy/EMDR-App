@@ -8,11 +8,14 @@
 					<thead>
 						<th>Patient ID:</th>
 						<th>Movements:</th>
+						<th>Session Log:</th>
 					</thead>
 					<tbody>
 					<tr>
 						<td>{{ patient.ID }}</td>
 						<td>{{ patient.movements }}</td>
+						<td></td>
+<!-- 						<td>{{ patient.sessions completed }}</td> -->
 						<td><button type="submit" ng-click="deletePatient(item.id)"><i class="small material-icons">delete</i></button></td>
 					</tr>
 					</tbody>
