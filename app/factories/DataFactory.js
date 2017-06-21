@@ -56,7 +56,9 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
 		return $q( (resolve, reject) => {
 			$http.get(`${FBCreds.databaseURL}/patients/${patientID}.json`)
       .then( (itemObj) => {
-        resolve(itemObj);
+      	var data = itemObj.data;
+      	data.fbID = patientID;
+        resolve(data);
       })
       .catch( (error) => {
         reject(error);

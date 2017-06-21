@@ -20,7 +20,7 @@ app.controller("PatientDataCtrl", function($scope, DataFactory, AuthFactory, $lo
 		DataFactory.getPatient($routeParams.patientID)
 		.then( (data) => {
 			$scope.patient = data;
-			console.log("data", data);
+			console.log("data with key", data);
 		});
 	};
 
