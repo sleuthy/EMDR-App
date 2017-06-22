@@ -8,10 +8,24 @@
 // $divider-color:        #BDBDBD;
 
 
+// header,
+// body,
+// footer {
+//   font-family: 'Raleway', cursive;
+// }
+
+// .emdrlogo {
+//   font-family:
+// }
+
+// html {
+//    background-image: linear-gradient(#294a60, #3A6073);
+// }
+
 @-webkit-keyframes movingcircle {
   0%{left:50%;}
-  25%{left:90%}
-  75%{left:10%;}
+  25%{left:95%}
+  75%{left:5%;}
   100%{left:50%;}
 }
 
@@ -19,8 +33,8 @@
   display: block;
   background: black;
   border-radius: 100%;
-  height: 150px;
-  width: 150px;
+  height: 190px;
+  width: 190px;
   margin: 0;
   background: radial-gradient(circle at 100px 100px, #5cabff, #000);
   position: absolute;
@@ -33,6 +47,7 @@
   animation-delay: 2.5s;
   animation-play-state: running;
 }
+
 
 .sessionpage {
   background-color: black;
@@ -47,4 +62,18 @@ body {
 
 main {
     flex: 1 0 auto;
-  }
+}
+
+.emdrfooter {
+  display: inline-block;
+}
+
+th {
+  font-weight: bolder;
+}
+
+// .logincard {
+
+//   height: 200px;
+//   width: 200px;
+// }

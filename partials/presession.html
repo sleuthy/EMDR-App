@@ -1,36 +1,32 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div ng-controller="PatientDataCtrl">
 	<div class="container">
-		<div class="row">
-			<div class="col s5 m5">
-				<div class="card">
+	<h2 class="center">Patient Info</h2>
+		<div class="row center">
+			<div class="col s12 card z-depth center">
 					<table>
 					<thead>
 						<th>Patient ID:</th>
 						<th>Movements:</th>
+						<th>Session Log:</th>
 					</thead>
 					<tbody>
 					<tr>
 						<td>{{ patient.ID }}</td>
 						<td>{{ patient.movements }}</td>
+						<td></td>
+<!-- 						<td>{{ patient.sessions completed }}</td> -->
+						<td><button type="submit" ng-click="deletePatient(item.id)"><i class="small material-icons">delete</i></button></td>
 					</tr>
 					</tbody>
 					</table>
-				</div>
 			</div>
-			<br>
-			<div>
+			<div class="col s12 center">
 				<a ng-href="#!/resourcing/{{patient.fbID}}"><button type="submit" class="btn teal">Begin Resourcing Session</button></a>
-			</div>
-			<br>
-			<div>
 				<a ng-href="#!/session/{{patient.fbID}}"><button type="submit" class="btn teal">Begin Regular Session</button></a>
-			</div>
-			<br>
-			<div>
 	<!-- 	<button ng-click="updatePatient(item.id)">Save</button> -->
-			<button type="submit" class="btn teal" ng-click="deletePatient(item.id)">Delete Patient</button>
 			</div>
 		</div>
 	</div>
 </div>
+
