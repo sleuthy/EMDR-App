@@ -1,8 +1,8 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div class="container" ng-controller="HomeCtrl">
-	<div>
+	<div class="input-field">
 <!-- 	<i class="small material-icons">search</i> -->
-	<input type="text" placeholder="Search Patients" ng-model="searchText.search">
+	<input id="search_patients" type="text" ng-model="searchText.search"><label for="search_patients">Search Patients</label>
 	</div>
 	<!-- <h4 class="center">Choose a Patient Below</h4> -->
 	<div class="row center">
