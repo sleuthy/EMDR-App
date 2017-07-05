@@ -81,7 +81,8 @@ app.factory("DataFactory", function($q, $http, FBCreds, AuthFactory){
   	const addTimestamp = ( patientID, editedObj ) => {
   		return $q( (resolve, reject) => {
   			let newObj = JSON.stringify(editedObj);
-			$http.patch(`${FBCreds.databaseURL}/patients/${patientID}.json`, newObj)
+  			console.log("newObj", newObj);
+			$http.put(`${FBCreds.databaseURL}/patients/${patientID}.json`, newObj)
 			.then( (itemObj) => {
 				resolve(itemObj);
 			})

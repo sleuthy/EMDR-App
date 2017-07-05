@@ -1,4 +1,7 @@
 lib/node_modules
-values
+app/values
 css/
 sass/cache
+test.html
+patientdata.json
+

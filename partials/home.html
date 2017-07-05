@@ -18,8 +18,7 @@
 		<tbody ng-repeat="item in patients | filter: searchText.search">
 			<tr>
 				<td><a ng-href="#!/presession/{{item.fbID}}"><button class="btn teal" type="submit">{{ item.ID }}</button></a></td>
-				<td></td>
-		<!-- 		<td>{{ item.sessionscompleted }}</td> -->
+				<td>{{ item.timestamp | date:'MMM d, y h:mm a' }}</td>
 			</tr>
 		</tbody>
 		</table>
