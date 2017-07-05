@@ -1,20 +1,28 @@
 <div ng-include="'partials/navbar.html'"></div>
 <div ng-controller="AddPatientCtrl">
-	<h2>Add New Patient</h2>
-	<div class="row">
-		<form class="col s8">
-			<div class="input-field col s8">
+	<div class="row center">
+		<div class="col s4"></div>
+		<form class="col s4 card z-depth-3 center">
+		<h2 class="center">Add New Patient</h2>
+		<!-- 	<div class="input-field col s8"> -->
+			<div class="input-field">
 			<input id="patient_id" type="text" ng-model="newPatient.ID">
 			<label for="patient_id">Patient ID</label>
 			</div>
-			<div class="input-field col s8">
+			<!-- </div> -->
+			<!-- <div class="input-field col s8"> -->
+			<div class="input-field">
 			<input id="movements" type="number" ng-model="newPatient.movements">
 			<label for="movements">Number of Movements</label>
 			</div>
-			<div class="col s8">
-			<button type="submit" ng-click="addPatient()">Add Patient</button>
+			<!-- </div> -->
+			<!-- <div class="col s8"> -->
+			<div>
+			<button class="btn teal" type="submit" ng-click="addPatient()">Add Patient</button>
 			</div>
-			</div>
+			<br>
+			<!-- </div> -->
 		</form>
+		<div class="col s4"></div>
 	</div>
 </div>

@@ -8,14 +8,24 @@
 					<thead>
 						<th>Patient ID:</th>
 						<th>Movements:</th>
-						<th>Session Log:</th>
+						<th>Last Session:</th>
 					</thead>
 					<tbody>
 					<tr>
 						<td>{{ patient.ID }}</td>
 						<td>{{ patient.movements }}</td>
-						<td></td>
-<!-- 						<td>{{ patient.sessions completed }}</td> -->
+						<!-- <td></td> -->
+						<td>{{ patient.lastsession }}</td>
+
+<!-- <div id="deleteModal" class="modal">
+          <div class="modal-content">
+                <h4>Delete Patient?</h4>
+          </div>
+    <div class="modal-footer">
+      <a ng-click="deletePatient(item.id)" class="modal-action modal-close waves-effect waves-green btn-flat">yes</a>
+      <a class="modal-action modal-close waves-effect waves-green btn-flat">no</a>
+      </div>
+ -->
 						<td><button type="submit" ng-click="deletePatient(item.id)"><i class="small material-icons">delete</i></button></td>
 					</tr>
 					</tbody>
