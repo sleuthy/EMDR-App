@@ -15,7 +15,7 @@
 						<td>{{ patient.ID }}</td>
 						<td>{{ patient.movements }}</td>
 						<!-- <td></td> -->
-						<td>{{ patient.lastsession }}</td>
+						<td>{{ patient.timestamp | date:'MMM d, y h:mm a' }}</td>
 
 <!-- <div id="deleteModal" class="modal">
           <div class="modal-content">
@@ -32,8 +32,8 @@
 					</table>
 			</div>
 			<div class="col s12 center">
-				<a ng-href="#!/resourcing/{{patient.fbID}}"><button type="submit" class="btn teal">Begin Resourcing Session</button></a>
-				<a ng-href="#!/session/{{patient.fbID}}"><button type="submit" class="btn teal">Begin Regular Session</button></a>
+				<a ng-href="#!/resourcing/{{patient.fbID}}"><button ng-click="addTimestamp()" type="submit" class="btn teal">Begin Resourcing Session</button></a>
+				<a ng-href="#!/session/{{patient.fbID}}"><button ng-click="addTimestamp()" type="submit" class="btn teal">Begin Regular Session</button></a>
 	<!-- 	<button ng-click="updatePatient(item.id)">Save</button> -->
 			</div>
 		</div>

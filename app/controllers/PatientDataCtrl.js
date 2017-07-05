@@ -14,7 +14,7 @@ app.controller("PatientDataCtrl", function($scope, DataFactory, AuthFactory, $lo
 		uid: user,
 		speed: "",
 		movements: "",
-		lastsession: ""
+		timestamp: ""
 	};
 
 	$scope.getPatient = function(){
@@ -47,13 +47,13 @@ app.controller("PatientDataCtrl", function($scope, DataFactory, AuthFactory, $lo
 		});
 	};
 
-	// $scope.addTimestamp = function(){
-	// 	DataFactory.addTimestamp($routeParams.patientID, $scope.patients)
-	// 	.then( (timestamp) => {
- //        	$scope.timestamp = Date.now();
-	// 		console.log("timestamp", $scope.timestamp);
-	// 	});
-	// };
+	$scope.addTimestamp = function(){
+		$scope.patient.timestamp = Date.now();
+		DataFactory.addTimestamp($routeParams.patientID, $scope.patient)
+		.then( (timestamp) => {
+			console.log("timestamp", timestamp);
+		});
+	};
 
 	$scope.getPatientList();
 	$scope.getPatient();
