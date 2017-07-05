@@ -14,10 +14,10 @@
 					<tr>
 						<td>{{ patient.ID }}</td>
 						<td>{{ patient.movements }}</td>
-						<!-- <td></td> -->
 						<td>{{ patient.timestamp | date:'MMM d, y h:mm a' }}</td>
 
-<!-- <div id="deleteModal" class="modal">
+<!-- delete alert modal here
+	<div id="deleteModal" class="modal">
           <div class="modal-content">
                 <h4>Delete Patient?</h4>
           </div>
@@ -32,9 +32,21 @@
 					</table>
 			</div>
 			<div class="col s12 center">
-				<a ng-href="#!/resourcing/{{patient.fbID}}"><button ng-click="addTimestamp()" type="submit" class="btn teal">Begin Resourcing Session</button></a>
-				<a ng-href="#!/session/{{patient.fbID}}"><button ng-click="addTimestamp()" type="submit" class="btn teal">Begin Regular Session</button></a>
-	<!-- 	<button ng-click="updatePatient(item.id)">Save</button> -->
+
+				<a ng-href="#!/resourcing/{{patient.fbID}}"><button ng-click="addTimestamp()" type="submit" class="btn waves-light">Begin Resourcing Session</button></a>
+				<a ng-href="#!/session/{{patient.fbID}}"><button ng-click="addTimestamp()" type="submit" class="btn waves-light">Begin Regular Session</button></a>
+
+<!-- 				<a class='dropdown-button btn' href='#' data-activates='dropdown1'>Choose Session Speed</a>
+  				<ul id='dropdown1' class='dropdown-content'>
+    				<li><a href="#!/session1.html/{{patient.fbID}}">one</a></li>
+			    	<li><a href="#!/session2.html/{{patient.fbID}}">two</a></li>
+			    	<li><a href="#!/session3.html/{{patient.fbID}}">three</a></li>
+			    	<li><a href="#!/session4.html/{{patient.fbID}}">four</a></li>
+			    	<li><a href="#!/session5.html/{{patient.fbID}}">five</a></li>
+			  </ul>
+ -->
+	<!-- 	<button ng-click="updatePatient(item.id)">Save</button> updatePatient function written-->
+
 			</div>
 		</div>
 	</div>
